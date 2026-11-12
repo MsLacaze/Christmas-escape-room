@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Operation Save Christmas — Year 9 Science Escape Room</title>
+<style>
+:root{--pine:#104b39;--deep:#082b27;--red:#b21e35;--gold:#f5c85b;--cream:#fff8e9;--ink:#203a31;--mint:#e3f4e9}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 10% 10%,#ffffff18 0 2px,transparent 3px),linear-gradient(145deg,var(--deep),#14513d);background-size:65px 65px,auto;color:var(--ink);font-family:Trebuchet MS,Arial,sans-serif;min-height:100vh}
+.snow{position:fixed;inset:0;pointer-events:none;opacity:.55;background-image:radial-gradient(#fff 1.5px,transparent 2px),radial-gradient(#fff 1px,transparent 2px);background-size:83px 83px,127px 127px;background-position:0 0,35px 40px;animation:snow 22s linear infinite}@keyframes snow{to{background-position:0 500px,35px 540px}}
+header{text-align:center;color:white;padding:24px 12px 16px}.lights{font-size:1.7rem;letter-spacing:8px}.badge{display:inline-block;background:var(--gold);color:#553e0b;border-radius:30px;padding:7px 15px;font-size:.8rem;font-weight:bold;letter-spacing:1px}
+h1{font-size:clamp(2rem,6vw,3.8rem);margin:10px 0 3px;text-shadow:0 4px #76172a,0 8px 15px #0008}.sub{margin:0;color:#e3fff0}
+main{max-width:1000px;margin:auto;padding:10px 16px 45px}.panel{background:var(--cream);border:5px solid #d8ad52;border-radius:22px;padding:clamp(16px,4vw,30px);box-shadow:0 18px 45px #0006;position:relative}.panel:after{content:"";position:absolute;inset:8px;border:2px dashed #ddcda9;border-radius:13px;pointer-events:none}.panel>*{position:relative}
+.story{text-align:center;line-height:1.6;font-size:1.06rem;max-width:850px;margin:0 auto 18px}.story strong{color:var(--red)}
+.status{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-weight:bold;font-size:.9rem}.bar{height:13px;background:#e7dfce;border-radius:20px;overflow:hidden;margin:9px 0 18px}.bar div{height:100%;width:0;background:linear-gradient(90deg,#14814e,#b6d64c);transition:.3s}
+.map{display:grid;grid-template-columns:repeat(auto-fit,minmax(125px,1fr));gap:10px;margin:15px 0 20px}.room{background:#fffdf5;border:2px solid #d9c9a5;border-radius:13px;padding:11px 7px;text-align:center;min-height:105px;display:grid;align-content:center;gap:3px}.room .icon{font-size:1.8rem}.room b{font-size:.9rem}.room small{color:#64766b}.room.active{border:3px solid var(--red)}.room.done{background:var(--mint);border-color:#409666}
+.challenge{background:#fff;border:2px solid #e3d7bc;border-radius:16px;padding:20px;margin-top:10px}.tag{display:inline-block;background:#e4f1e8;color:#246344;padding:5px 10px;border-radius:20px;font-size:.76rem;font-weight:bold}.challenge h2{color:var(--pine);margin:9px 0 4px;font-size:1.55rem}.instructions{color:#5b6b61;margin:0 0 14px;line-height:1.5}.task{background:#fff8e9;border-left:5px solid var(--gold);padding:13px;border-radius:8px;line-height:1.55;margin:12px 0}.question{font-size:1.05rem;line-height:1.5;margin:12px 0}.options{display:grid;gap:8px}.option{background:#fffaf0;border:2px solid #e0d4b8;border-radius:9px;padding:11px;text-align:left;font:inherit;color:var(--ink);cursor:pointer}.option:hover{border-color:#b78b35}.option.chosen{background:#e5f3e9;border-color:#32875a}.entry{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.entry input{font:inherit;padding:11px;border:2px solid #cbbd9e;border-radius:8px;width:min(100%,230px)}button{font:inherit;cursor:pointer}.primary{background:var(--red);color:white;border:0;border-radius:9px;padding:11px 18px;font-weight:bold;box-shadow:0 4px #791426}.secondary{background:#e9e1ce;color:#425448;border:0;border-radius:9px;padding:10px 14px;font-weight:bold}.feedback{font-weight:bold;min-height:26px;margin-top:12px}.good{color:#16804c}.bad{color:#b21e35}.hint{display:none;background:#fff2c9;border-left:5px solid #d6a12d;border-radius:7px;padding:11px;margin-top:10px;line-height:1.5}.codebox{display:flex;gap:9px;align-items:center;flex-wrap:wrap;background:#153e32;color:white;border-radius:12px;padding:13px;margin:16px 0}.digits{font-size:1.45rem;letter-spacing:7px;color:#ffe18b;font-weight:bold}.hidden{display:none!important}.bottom{text-align:center;color:#e5fff4;font-size:.85rem;padding:17px}.victory{text-align:center}.victory .emoji{font-size:4rem}.victory h2{font-size:2.2rem;color:var(--pine)}.certificate{border:3px double #c49b42;border-radius:12px;padding:20px;margin:18px auto;max-width:600px;background:#fffdf5}.certificate h3{font-family:Georgia,serif;font-size:1.8rem;color:var(--red);margin:4px}.small{font-size:.85rem;color:#64766b}
+@media(max-width:550px){.entry input{width:100%}.entry button{width:100%}.map{grid-template-columns:repeat(2,1fr)}}
+</style></head>
+<body><div class="snow"></div>
+<header><div class="badge">🎄 YEAR 9 SCIENCE • CHRISTMAS ESCAPE ROOM 🎄</div><h1>OPERATION: SAVE CHRISTMAS!</h1><p class="sub">The North Pole needs your science skills…</p><div class="lights">🔴 🟡 🟢 🔵 🟣 🟠</div></header>
+<main>
+<section class="panel" id="game">
+<p class="story">Christmas Eve is only hours away. A mischievous gremlin has scrambled the North Pole security system, locked the workshop and hidden the <strong>master launch code</strong>. Complete each room, solve its mini-challenges and collect a code digit. You need all <strong>six digits</strong> to restart Santa's sleigh. Work as a team — write down every digit!</p>
+<div class="status"><span id="progressText">0 / 6 rooms cleared</span><span id="digitText">Code digits collected: 0 / 6</span></div><div class="bar"><div id="bar"></div></div>
+<div class="map" id="map"></div>
+<div class="challenge" id="challenge">
+<span class="tag" id="tag"></span><h2 id="title"></h2><p class="instructions" id="intro"></p>
+<div id="stage"></div>
+<div class="entry" style="margin-top:15px"><button class="primary" id="submit" onclick="submitStage()">🔐 Enter room code</button><button class="secondary" onclick="hint()">💡 Hint</button></div>
+<div class="hint" id="hintBox"></div><div class="feedback" id="feedback" aria-live="polite"></div>
+</div>
+<div class="codebox"><span>🔐 YOUR CODEBOOK</span><span class="digits" id="codebook">_ _ _ _ _ _</span><span class="small" style="color:#e9f0e9">Keep these digits safe!</span></div>
+</section>
+<section class="panel hidden" id="final">
+<div class="victory"><div class="emoji">🎅🛷🎄</div><h2>THE SLEIGH IS UNLOCKED!</h2><p class="story">You solved every room, cracked the master code and saved Christmas. The reindeer are ready for take-off!</p>
+<div class="certificate"><p>OFFICIAL NORTH POLE CERTIFICATE</p><h3>Christmas Science Champion</h3><p>This certifies that you helped save Christmas using excellent scientific thinking.</p><div style="font-size:2rem">⭐ 🎁 ⭐</div><p><b>MASTER CODE: <span id="finalCode"></span></b></p></div>
+<button class="primary" onclick="location.reload()">↻ Play again</button></div>
+</section>
+</main><div class="bottom">Think like a scientist. Communicate like a team. Save Christmas! ✨</div>
+<script>
+const rooms=[
+{icon:"🧪",name:"Elf Laboratory",intro:"The elves have mixed up their experiment labels. Sort out the science to activate the lab keypad.",hint:"A physical change does not make a new substance. A chemical reaction does.",tasks:[
+{q:"1. Which is a chemical change?",opts:["Ice melting","Paper being torn","Baking soda reacting with vinegar and fizzing","Water freezing"],a:2},
+{q:"2. The fizzing bubbles are evidence that a gas is being…",opts:["Produced","Frozen","Absorbed by the paper","Turned into a solid"],a:0}
+],code:"3",why:"Both answers are correct. Chemical reactions can produce new substances, including gases. Your first code digit is 3."},
+{icon:"🌋",name:"Volcano Vault",intro:"A mini volcano has erupted in the toy workshop! Answer the Earth science questions to open the vault.",hint:"Magma is below the surface. Lava is molten rock that has reached the surface.",tasks:[
+{q:"1. What is molten rock called while it is still below Earth's surface?",opts:["Lava","Magma","Ash","Steam"],a:1},
+{q:"2. Which part of a volcano carries magma towards the surface?",opts:["Vent","Crater lake","Cloud","Root"],a:0}
+],code:"7",why:"Magma travels up through a vent. When it reaches the surface, it is called lava. Your second code digit is 7."},
+{icon:"⚡",name:"Energy Station",intro:"The sleigh's power supply has failed. Show that you understand forces and energy to restore power.",hint:"Friction acts between surfaces in contact. Speed = distance ÷ time.",tasks:[
+{q:"1. Which force opposes the motion of sleigh runners sliding over snow?",opts:["Gravity","Friction","Magnetism","Upthrust"],a:1},
+{q:"2. A reindeer trots 30 metres in 5 seconds. What is its average speed?",opts:["5 m/s","6 m/s","25 m/s","150 m/s"],a:1}
+],code:"2",why:"Friction opposes sliding motion. 30 ÷ 5 = 6 m/s. Your third code digit is 2."},
+{icon:"🦠",name:"Microbe Maze",intro:"The workshop's microscope security system is asking questions about microorganisms. Get both right to pass through.",hint:"Viruses need a host cell to reproduce. Not all microorganisms are harmful.",tasks:[
+{q:"1. What do viruses need in order to reproduce?",opts:["Sunlight only","A host cell","Soil","A microscope"],a:1},
+{q:"2. Which statement is true?",opts:["All bacteria cause disease","All microorganisms are visible to the naked eye","Some microorganisms are useful to humans","Viruses are made of many cells"],a:2}
+],code:"9",why:"Viruses use host cells to reproduce. Many microorganisms are useful, for example in food production and decomposition. Your fourth code digit is 9."},
+{icon:"🎄",name:"Christmas Knowledge Cabin",intro:"The elves have hidden the next digit inside a Christmas trivia quiz. Science brains and Christmas brains both required!",hint:"Think about the traditional Christmas song and the name for a group of reindeer.",tasks:[
+{q:"1. In the song, how many reindeer are named before Rudolph joined the team?",opts:["6","8","9","12"],a:1},
+{q:"2. What is the name for an animal that keeps its body temperature fairly constant internally?",opts:["Ectotherm","Endotherm","Decomposer","Producer"],a:1}
+],code:"5",why:"There are eight reindeer named in the traditional song before Rudolph. An endotherm regulates its body temperature internally. Your fifth code digit is 5."},
+{icon:"🎁",name:"Santa's Final Safe",intro:"One last challenge! Calculate the sleigh's speed, then use the answer to reveal the final digit.",hint:"Speed = distance ÷ time. Divide 180 km by 3 hours.",tasks:[
+{q:"1. Santa travels 180 kilometres in 3 hours. What is his average speed?",opts:["30 km/h","60 km/h","90 km/h","540 km/h"],a:1},
+{q:"2. Which unit is suitable for measuring this speed?",opts:["Kilograms","Metres","Kilometres per hour","Degrees Celsius"],a:2}
+],code:"4",why:"180 ÷ 3 = 60 km/h. Kilometres per hour is a speed unit. Your sixth code digit is 4."}
+];
+let index=0,answers=[],digits=Array(6).fill("_"),cleared=Array(6).fill(false);
+const el=id=>document.getElementById(id);
+function drawMap(){el("map").innerHTML=rooms.map((r,i)=>`<div class="room ${cleared[i]?"done":i===index?"active":""}"><span class="icon">${cleared[i]?"🔓":r.icon}</span><b>${r.name}</b><small>${cleared[i]?"CLEARED":`Room ${i+1} of 6`}</small></div>`).join("");el("progressText").textContent=cleared.filter(Boolean).length+" / 6 rooms cleared";el("digitText").textContent="Code digits collected: "+digits.filter(x=>x!=="_").length+" / 6";el("bar").style.width=(cleared.filter(Boolean).length/6*100)+"%";el("codebook").textContent=digits.join(" ")}
+function render(){let r=rooms[index];answers=[];el("tag").textContent=`ROOM ${index+1} • ${r.name.toUpperCase()}`;el("title").textContent=r.icon+" "+r.name;el("intro").textContent=r.intro;el("hintBox").style.display="none";el("hintBox").textContent=r.hint;el("feedback").textContent="";el("feedback").className="feedback";el("submit").textContent="🔐 Check answers";
+el("stage").innerHTML=r.tasks.map((t,ti)=>`<div class="task"><b>${t.q}</b><div class="options">${t.opts.map((o,oi)=>`<button class="option" data-task="${ti}" data-option="${oi}" onclick="choose(${ti},${oi},this)">${String.fromCharCode(65+oi)}. ${o}</button>`).join("")}</div></div>`).join("");drawMap()}
+function choose(ti,oi,btn){answers[ti]=oi;document.querySelectorAll(`[data-task="${ti}"]`).forEach(b=>b.classList.remove("chosen"));btn.classList.add("chosen")}
+function hint(){el("hintBox").style.display="block"}
+function submitStage(){let r=rooms[index];if(answers.length!==r.tasks.length||r.tasks.some((t,i)=>answers[i]===undefined)){el("feedback").textContent="Answer both questions before entering the code.";el("feedback").className="feedback bad";return}
+let correct=r.tasks.every((t,i)=>answers[i]===t.a);if(!correct){el("feedback").textContent="Not quite! Revisit the questions and try again. You can use the hint.";el("feedback").className="feedback bad";return}
+cleared[index]=true;digits[index]=r.code;drawMap();el("feedback").textContent="✓ "+r.why;el("feedback").className="feedback good";el("submit").textContent=index===5?"🎄 Enter the master code":"➡️ Unlock next room";el("submit").onclick=next}
+function next(){if(index<5){index++;el("submit").onclick=submitStage;render()}else{el("game").classList.add("hidden");el("final").classList.remove("hidden");el("finalCode").textContent=digits.join("");window.scrollTo({top:0,behavior:"smooth"})}}
+render();
+</script></body></html>
